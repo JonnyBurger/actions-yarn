@@ -12,5 +12,6 @@ LABEL com.github.actions.color="#2188b6"
 # COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
 
 COPY "entrypoint.sh" "/entrypoint.sh"
+RUN apk add --no-cache git
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["help"]
